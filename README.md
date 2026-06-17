@@ -20,6 +20,18 @@ Browser input -> Session server -> PES/PCSX2/Wine -> WebRTC video/audio
 
 El prototipo simula sesiones, estados de compatibilidad, consola de emulación, métricas y progreso. No ejecuta emuladores reales ni procesa archivos de juego.
 
+## Playable shell
+
+La ruta publica incluye un deep link jugable en `#play`. Esa pantalla muestra una "PLAY SESSION" con marco CRT, HUD, telemetria, logs de sesion y un mini-juego de futbol abstracto en canvas:
+
+- Mover jugador con WASD o flechas.
+- Chutar con Espacio.
+- Usar controles tactiles en movil.
+- Tocar el balon, chutar a porteria y sumar goles.
+- Reiniciar la sesion demo sin cargar archivos externos.
+
+Esto es una demo interactiva del shell de sesion. Lo jugable publico es la interfaz y el mini-juego propio; el stream real de PES requeriria un servidor de sesion, backend de streaming y archivos aportados por el usuario.
+
 ## Instalación local
 
 ```bash
@@ -49,6 +61,6 @@ En GitHub, configura Pages con "GitHub Actions" como fuente de despliegue.
 ## Limitaciones legales y técnicas
 
 - No se incluye PES 6, ISO, ejecutables, BIOS, audio, comentarios, logos, option files comerciales ni assets oficiales.
-- La sección de sesión es una simulación visual para validar UX.
+- La pantalla `#play` es una shell/demo jugable propia para validar UX; no contiene PES 6 ni material oficial.
 - La emulación remota real requeriría aislamiento por sesión, subida/verificación de archivos aportados por el usuario, licencias claras, servidor GPU/CPU, streaming WebRTC, input de baja latencia y políticas de borrado.
 - PCSX2, Wine u otros componentes se mencionan solo como posibles piezas de arquitectura futura; no se empaquetan en este prototipo.
